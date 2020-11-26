@@ -1,0 +1,46 @@
+/* add css module styles here (optional) */
+.smak-tooltip-source {
+  position: relative;
+  cursor: pointer;
+  color: dodgerblue;
+}
+.smak-tooltip-source:focus {
+  outline: 2px groove rgba(0, 0, 0, 0.1);
+  outline-offset: 5px;
+}
+.smak-tooltip-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: var(--displayVal);
+}
+.smak-tooltip-container::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  left: var(--leftVal);
+  bottom: var(--bottomVal);
+  top: var(--topVal);
+  right: var(--rightVal);
+  border-left: var(--borderLeftVal);
+  border-right: var(--borderRightVal);
+  border-top: var(--borderTopVal);
+  border-bottom: var(--borderBottomVal);
+  display: var(--displayVal);
+}
+.smak-tooltip-container {
+  width: 200px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+.smak-tooltip-container div {
+  padding: 4px 8px;
+}
